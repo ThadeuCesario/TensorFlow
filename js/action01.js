@@ -22,10 +22,22 @@ const executar = () => {
 		Também temos um tensor tridimensional
 		Podemos escrever um tensor tridimensional da seguinte forma:
 		Os elementos 1,2,3,4 sendo 2 linhas 2 colunas e elementos unicos
-		const tensor2d = tf.tensor3d([1,2,3,4], [2,2,1]);
+		const tensor3d = tf.tensor3d([1,2,3,4], [2,2,1]);
+
+		No tensor de quatro dimensões também podemos escrever da seguinte forma:
+		const tensor4d = tf.tensor4d([1,2,3,4], [1, 2, 2, 1])
+
+		No tensor de cinco dimensões também podemos escrever da seguinte forma:
+		const tensor5d = tf.tensor5d([1,2,3,4], [1, 1, 2, 2, 1])
+
+		No tensor de seis dimensões também podemos escrever da seguinte forma:
+		const tensor6d = tf.tensor6d([1,2,3,4], [1, 1, 1, 2, 2, 1])
 	*/
 	const tensor2d = tf.tensor2d([1, 2, 3, 4], [2, 2]);
 	const tensor3d = tf.tensor3d([[[1], [2]], [[3], [4]]]);
+	const tensor4d = tf.tensor4d([[[[1], [2]], [[3], [4]]]]);
+	const tensor5d = tf.tensor5d([[[[[1], [2]], [[3], [4]]]]]);
+	const tensor6d = tf.tensor6d([[[[[[1], [2]], [[3], [4]]]]]]);
 
 	txt = `
 		Tensor escalar:
@@ -40,6 +52,15 @@ const executar = () => {
 
 		Três dimensões
 		${tensor3d.toString()}
+
+		Quatro dimensões
+		${tensor4d.toString()}
+
+		Cinco dimensões
+		${tensor5d.toString()}
+
+		Seis dimensões
+		${tensor6d.toString()}
 	`;
 
 	exibir(txt);
